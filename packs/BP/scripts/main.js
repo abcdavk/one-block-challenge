@@ -1,4 +1,4 @@
-import { EntityComponentTypes, ItemStack, system, world } from "@minecraft/server";
+import { EnchantmentType, EntityComponentTypes, ItemComponentTypes, ItemStack, system, world } from "@minecraft/server";
 import { ActionFormData, ModalFormData } from "@minecraft/server-ui";
 import { convertTypeIdToAuxIcon, itemTypeIdToName, truncateWithDots } from "./utils";
 import { generatorRegistry, itemBuyableRegistry, itemSellableRegistry, oneBlocks } from "./config";
@@ -118,7 +118,16 @@ function buyItemHandler(player, selectedItem) {
             const isCanceled = new Money().remove(player.nameTag, totalPrice);
             if (!isCanceled) {
                 player.sendMessage(`Successfully purchased §e${itemAmount}x§r §b${itemName}§r for §a$${totalPrice.toFixed(2)}§r`);
-                player.dimension.spawnItem(new ItemStack(selectedItem.id, itemAmount), player.location);
+                let spawnedItem = new ItemStack(selectedItem.id);
+                let enchantable = spawnedItem.getComponent(ItemComponentTypes.Enchantable);
+                if (selectedItem.enchantments) {
+                    for (const enchant of selectedItem.enchantments) {
+                        enchantable?.addEnchantment({ type: new EnchantmentType(enchant.type), level: enchant.level });
+                    }
+                }
+                for (let i = 0; i < itemAmount; i++) {
+                    player.dimension.spawnItem(spawnedItem, player.location);
+                }
                 player.playSound("mob.villager.yes");
             }
             else {
@@ -161,11 +170,11 @@ function buyItemUI(player) {
     let form = new ActionFormData()
         .title(`§f§2§2§r§l§0Buy Item\n§r§2$${moneyAmount}`);
     for (let i = 0; i < itemBuyableRegistry.length; i++) {
-        const { id, price, enchantment } = itemBuyableRegistry[i];
+        const { id, price, enchantments } = itemBuyableRegistry[i];
         const amount = 1;
         if (!id)
             continue;
-        const itemName = enchantment !== undefined ? itemTypeIdToName(enchantment[0].id) : itemTypeIdToName(id);
+        const itemName = enchantments !== undefined ? itemTypeIdToName(enchantments[0].type) : itemTypeIdToName(id);
         const soldInfo = amount > 1
             ? `x${amount}\n${itemName}`
             : itemName;
