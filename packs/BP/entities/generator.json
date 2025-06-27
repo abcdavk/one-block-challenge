@@ -1,0 +1,272 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "dave:generator",
+            "spawn_category": "creature",
+            "is_spawnable": true,
+            "is_summonable": true,
+            "is_experimental": false
+        },
+        "component_groups": {
+            "dave:dirt": {
+                "minecraft:variant": {
+                "value": 0
+                }
+            },
+            "dave:cobblestone": {
+                "minecraft:variant": {
+                "value": 1
+                }
+            },
+            "dave:farmland": {
+                "minecraft:variant": {
+                "value": 2
+                }
+            },
+            "dave:sand": {
+                "minecraft:variant": {
+                "value": 3
+                }
+            },
+            "dave:ender": {
+                "minecraft:variant": {
+                "value": 4
+                }
+            },
+            "dave:iron": {
+                "minecraft:variant": {
+                "value": 5
+                }
+            },
+            "dave:diamond": {
+                "minecraft:variant": {
+                "value": 6
+                }
+            },
+            "dave:emerald": {
+                "minecraft:variant": {
+                "value": 7
+                }
+            },
+            "dave:lapis": {
+                "minecraft:variant": {
+                "value": 8
+                }
+            },
+            "dave:copper": {
+                "minecraft:variant": {
+                "value": 9
+                }
+            },
+            "dave:wood": {
+                "minecraft:variant": {
+                "value": 10
+                }
+            },
+            "dave:portal": {
+                "minecraft:variant": {
+                "value": 11
+                }
+            },
+            "dave:dye": {
+                "minecraft:variant": {
+                "value": 12
+                }
+            },
+            "dave:redstone": {
+                "minecraft:variant": {
+                "value": 13
+                }
+            },
+            "dave:coal": {
+                "minecraft:variant": {
+                "value": 14
+                }
+            },
+            "dave:gold": {
+                "minecraft:variant": {
+                "value": 15
+                }
+            },
+            "dave:nether": {
+                "minecraft:variant": {
+                "value": 16
+                }
+            },
+            "dave:cave": {
+                "minecraft:variant": {
+                "value": 17
+                }
+            },
+            "dave:ocean": {
+                "minecraft:variant": {
+                "value": 18
+                }
+            }
+        },
+        "components": {
+            "minecraft:collision_box": {
+                "width": 1,
+                "height": 1
+            },
+            "minecraft:inventory": {
+                "additional_slots_per_strength": 0,
+                "can_be_siphoned_from": true,
+                "container_type": "container",
+                "inventory_size": 27,
+                "private": false
+            },
+            "minecraft:type_family": { "family": ["diamond_generator"] },
+            "minecraft:health": { "value": 10, "max": 10 },
+            "minecraft:damage_sensor": {
+                "triggers": { "cause": "all", "deals_damage": false }
+            },
+            "minecraft:knockback_resistance": {
+                "value": 100
+            },
+            "minecraft:pushable": {
+                "is_pushable": false,
+                "is_pushable_by_piston": false
+            },
+            "minecraft:nameable": {
+                "always_show": false
+            }
+        },
+        "events": {
+            "dave:dirt": {
+                "add": {
+                "component_groups": [
+                    "dave:dirt"
+                ]
+                }
+            },
+            "dave:cave": {
+                "add": {
+                "component_groups": [
+                    "dave:cave"
+                ]
+                }
+            },
+            "dave:ocean": {
+                "add": {
+                "component_groups": [
+                    "dave:ocean"
+                ]
+                }
+            },
+            "dave:cobblestone": {
+                "add": {
+                "component_groups": [
+                    "dave:cobblestone"
+                ]
+                }
+            },
+            "dave:farmland": {
+                "add": {
+                "component_groups": [
+                    "dave:farmland"
+                ]
+                }
+            },
+            "dave:sand": {
+                "add": {
+                "component_groups": [
+                    "dave:sand"
+                ]
+                }
+            },
+            "dave:ender": {
+                "add": {
+                "component_groups": [
+                    "dave:ender"
+                ]
+                }
+            },
+            "dave:iron": {
+                "add": {
+                "component_groups": [
+                    "dave:iron"
+                ]
+                }
+            },
+            "dave:diamond": {
+                "add": {
+                "component_groups": [
+                    "dave:diamond"
+                ]
+                }
+            },
+            "dave:emerald": {
+                "add": {
+                "component_groups": [
+                    "dave:emerald"
+                ]
+                }
+            },
+            "dave:lapis": {
+                "add": {
+                "component_groups": [
+                    "dave:lapis"
+                ]
+                }
+            },
+            "dave:copper": {
+                "add": {
+                "component_groups": [
+                    "dave:copper"
+                ]
+                }
+            },
+            "dave:wood": {
+                "add": {
+                "component_groups": [
+                    "dave:wood"
+                ]
+                }
+            },
+            "dave:portal": {
+                "add": {
+                "component_groups": [
+                    "dave:portal"
+                ]
+                }
+            },
+            "dave:dye": {
+                "add": {
+                "component_groups": [
+                    "dave:dye"
+                ]
+                }
+            },
+            "dave:redstone": {
+                "add": {
+                "component_groups": [
+                    "dave:redstone"
+                ]
+                }
+            },
+            "dave:coal": {
+                "add": {
+                "component_groups": [
+                    "dave:coal"
+                ]
+                }
+            },
+            "dave:gold": {
+                "add": {
+                "component_groups": [
+                    "dave:gold"
+                ]
+                }
+            },
+            "dave:nether": {
+                "add": {
+                "component_groups": [
+                    "dave:nether"
+                ]
+                }
+            }
+        }
+    }
+}

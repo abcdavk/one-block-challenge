@@ -1,0 +1,42 @@
+{
+    "format_version": "1.8.0",
+    "render_controllers": {
+        "controller.render.generator": {
+            "arrays": {
+                "textures": {
+                    "Array.variants": [
+                        "Texture.default",
+                        "Texture.cobblestone",
+                        "Texture.farmland",
+                        "Texture.sand",
+                        "Texture.ender",
+                        "Texture.iron",
+                        "Texture.diamond",
+                        "Texture.emerald",
+                        "Texture.lapis",
+                        "Texture.copper",
+                        "Texture.wood",
+                        "Texture.portal",
+                        "Texture.dye",
+                        "Texture.redstone",
+                        "Texture.coal",
+                        "Texture.gold",
+                        "Texture.nether",
+                        "Texture.cave",
+                        "Texture.Ocean"
+                    ]
+                }
+            },
+            "part_visibility": [ { "base": "query.show_bottom" } ],
+            "geometry": "Geometry.default",
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+            "textures": [
+                "Array.variants[query.variant]"
+            ]
+        }
+    }
+}

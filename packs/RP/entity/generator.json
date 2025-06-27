@@ -1,0 +1,56 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "dave:generator",
+      "materials": {
+        "default": "ender_crystal"
+      },
+      "textures": {
+        "default": "textures/entity/dirt_generator",
+        "cobblestone": "textures/entity/cobblestone_generator",
+        "farmland": "textures/entity/farmland_generator",
+        "sand": "textures/entity/sand_generator",
+        "ender": "textures/entity/ender_generator",
+        "iron": "textures/entity/iron_generator",
+        "diamond": "textures/entity/diamond_generator",
+        "emerald": "textures/entity/emerald_generator",
+        "lapis": "textures/entity/lapis_generator",
+        "copper": "textures/entity/copper_generator",
+        "wood": "textures/entity/wood_generator",
+        "portal": "textures/entity/portal_generator",
+        "dye": "textures/entity/dye_generator",
+        "redstone": "textures/entity/redstone_generator",
+        "coal": "textures/entity/coal_generator",
+        "gold": "textures/entity/gold_generator",
+        "nether": "textures/entity/nether_generator",
+        "cave": "textures/entity/cave_generator",
+        "ocean": "textures/entity/ocean_generator"
+      },
+      "geometry": {
+        "default": "geometry.ender_crystal"
+      },
+      "animations": {
+        "move": "animation.generator.move",
+        "death": "animation.generator.nothing",
+        "death_control": "controller.animation.generator.cancel_death_animaton"
+      },
+      "scripts": {
+        "initialize": [
+          "variable.time_offset = Math.random(0, 100000);"
+        ],
+        "animate": [
+          "move",
+          "death_control"
+        ],
+        "should_update_effects_offscreen": "1.0"
+      },
+      "render_controllers": [
+        "controller.render.generator"
+      ],
+      "spawn_egg": {
+        "texture": "dirt_generator"
+      }
+    }
+  }
+}

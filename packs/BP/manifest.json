@@ -1,0 +1,59 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "One Block Challenge",
+		"description": "This is description!",
+		"uuid": "7dbb2fca-ea1e-4a34-a652-7cd4ab062fc7",
+		"version": [
+			1,
+			0,
+			0
+		],
+		"min_engine_version": [
+			1,
+			21,
+			0
+		]
+	},
+	"modules": [
+		{
+			"type": "script",
+			"uuid": "502c7f53-a1f2-4190-8191-edf72a8574a7",
+			"version": [
+				1,
+				0,
+				0
+			],
+			"description": "Script Resource",
+			"language": "javascript",
+			"entry": "scripts/main.js"
+		},
+		{
+			"type": "data",
+			"uuid": "cc85301e-55ed-4dac-88dd-478a3df0d270",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"module_name": "@minecraft/server",
+			"version": "2.0.0"
+		},
+		{
+			"module_name": "@minecraft/server-ui",
+			"version": "2.0.0"
+		},
+		{
+			"uuid": "48e18f18-1f4d-46e3-8dea-47b72e204bb6",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	]
+}

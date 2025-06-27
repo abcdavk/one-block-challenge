@@ -1,0 +1,36 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.generator.move": {
+			"loop": true,
+			"bones": {
+				"outerglass": {
+					"position": [ 0.0, "16.0 + Math.sin(query.life_time * 115.0 + variable.time_offset) * 8.0", 0.0 ],
+					"rotation": [ 39.2, "14.5 + (query.life_time * -30.0 + variable.time_offset)", -39.2 ]
+				},
+				"innerglass": {
+					"scale": [ 0.875, 0.875, 0.875 ],
+					"rotation": [ 39.2, "14.5 + (query.life_time * -30.0 + variable.time_offset)", -39.2 ]
+				},
+				"crystal": {
+					"scale": [ 0.875, 0.875, 0.875 ],
+					"rotation": [ 219.2, "14.5 + (query.life_time * -30.0 + variable.time_offset)", -39.2 ]
+				}
+			}
+		},
+		"animation.generator.nothing": {
+			"loop": false,
+			"bones": {
+				"outerglass": {
+					"rotation" : [ 0, 0, "Math.min(Math.sqrt(Math.max(0, q.anim_time * 20 - 0.5) / 20 * 1.6), 1) * -90" ]
+				},
+				"innerglass": {
+					"rotation" : [ 0, 0, "Math.min(Math.sqrt(Math.max(0, q.anim_time * 20 - 0.5) / 20 * 1.6), 1) * -90" ]
+				},
+				"crystal": {
+					"rotation" : [ 0, 0, "Math.min(Math.sqrt(Math.max(0, q.anim_time * 20 - 0.5) / 20 * 1.6), 1) * -90" ]
+				}
+			}
+    }
+	}
+}

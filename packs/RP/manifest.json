@@ -1,0 +1,39 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "One Block Challenge",
+		"description": "This is description!",
+		"uuid": "48e18f18-1f4d-46e3-8dea-47b72e204bb6",
+		"version": [
+			1,
+			0,
+			0
+		],
+		"min_engine_version": [
+			1,
+			21,
+			0
+		]
+	},
+	"modules": [
+		{
+			"type": "resources",
+			"uuid": "afdd1848-ac59-4626-8d9d-d67e2dbb012e",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "7dbb2fca-ea1e-4a34-a652-7cd4ab062fc7",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	]
+}

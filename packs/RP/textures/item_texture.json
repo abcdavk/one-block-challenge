@@ -1,0 +1,63 @@
+{
+  "resource_pack_name": "vanilla",
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "dirt_generator": {
+      "textures": "textures/items/dirt_generator"
+    },
+    "cave_generator": {
+      "textures": "textures/items/cave_generator"
+    },
+    "ocean_generator": {
+      "textures": "textures/items/ocean_generator"
+    },
+    "cobblestone_generator": {
+      "textures": "textures/items/cobblestone_generator"
+    },
+    "farmland_generator": {
+      "textures": "textures/items/farmland_generator"
+    },
+    "sand_generator": {
+      "textures": "textures/items/sand_generator"
+    },
+    "ender_generator": {
+      "textures": "textures/items/ender_generator"
+    },
+    "iron_generator": {
+      "textures": "textures/items/iron_generator"
+    },
+    "diamond_generator": {
+      "textures": "textures/items/diamond_generator"
+    },
+    "emerald_generator": {
+      "textures": "textures/items/emerald_generator"
+    },
+    "lapis_generator": {
+      "textures": "textures/items/lapis_generator"
+    },
+    "copper_generator": {
+      "textures": "textures/items/copper_generator"
+    },
+    "wood_generator": {
+      "textures": "textures/items/wood_generator"
+    },
+    "portal_generator": {
+      "textures": "textures/items/portal_generator"
+    },
+    "dye_generator": {
+      "textures": "textures/items/dye_generator"
+    },
+    "redstone_generator": {
+      "textures": "textures/items/redstone_generator"
+    },
+    "coal_generator": {
+      "textures": "textures/items/coal_generator"
+    },
+    "gold_generator": {
+      "textures": "textures/items/gold_generator"
+    },
+    "nether_generator": {
+      "textures": "textures/items/nether_generator"
+    }
+  }
+}
